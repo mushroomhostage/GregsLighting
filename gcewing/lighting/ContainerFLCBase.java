@@ -3,15 +3,29 @@ package gcewing.lighting;
 import net.minecraft.server.Container;
 import net.minecraft.server.EntityHuman;
 import net.minecraft.server.ItemStack;
+import net.minecraft.server.IInventory;
 import net.minecraft.server.PlayerInventory;
 import net.minecraft.server.Slot;
+import net.minecraft.server.EntityHuman;
 
 public class ContainerFLCBase extends Container
 {
     TEFloodlightCarbide te;
+    private EntityHuman player;
+
+    public EntityHuman getPlayer()
+    {
+        return player;
+    }
+
+    public IInventory getInventory()
+    {
+        return te;
+    }
 
     public ContainerFLCBase(PlayerInventory var1, TEFloodlightCarbide var2)
     {
+        this.player = var1.player;
         this.te = var2;
         this.a(new Slot(var2, 0, 44, 8));
         this.a(new Slot(var2, 1, 116, 60));

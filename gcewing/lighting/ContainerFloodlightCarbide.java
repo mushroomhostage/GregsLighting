@@ -2,6 +2,7 @@ package gcewing.lighting;
 
 import net.minecraft.server.ICrafting;
 import net.minecraft.server.PlayerInventory;
+import net.minecraft.server.EntityHuman;
 
 public class ContainerFloodlightCarbide extends ContainerFLCBase
 {
